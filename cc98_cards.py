@@ -17,10 +17,10 @@ elem = driver.find_element_by_xpath("/html/body/nav[@class='navbar fixed-top nav
 elem.click()
 user_name = driver.find_element_by_id("UserName")
 user_name.clear()
-user_name.send_keys("#Your UserName#")
+user_name.send_keys("#------Your UserName------#")
 pass_word = driver.find_element_by_id("Password")
 pass_word.clear()
-pass_word.send_keys("#Your PassWord#")
+pass_word.send_keys("#------Your PassWord------#")
 login_btn = driver.find_element_by_class_name("btn-primary")
 login_btn.click()
 auth_btn = driver.find_element_by_class_name("btn-success")
@@ -38,8 +38,6 @@ while(1):
 	# 全部翻开
 	turnCards_btn = driver.find_element_by_class_name("btn-primary")
 	turnCards_btn.click()
-	# turnCards_btn = driver.find_element_by_xpath("/html/body/div[@class='container body-content']/div[@id='result-panel']/div[@class='text-center']/button[@class='btn btn-primary'][1]")
-	# turnCards_btn.click()
 	# 延时3秒，观察一下
 	time_delay(3)
 	# 再来一次
