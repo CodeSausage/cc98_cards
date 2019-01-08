@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 def time_delay(a):
-	# --------ÑÓÊ±Ä£¿é----------
+	# --------å»¶æ—¶æ¨¡å—----------
 	driver.implicitly_wait(10)
 	time.sleep(a)
 	#--------------------
@@ -31,56 +31,20 @@ takeCards_btn = driver.find_element_by_xpath("/html/body/div[@class='container b
 takeCards_btn.click()
 begin_btn = driver.find_element_by_class_name("btn-primary")
 begin_btn.click()
-# ´¦Àíconfirmµ¯´°
+# å¤„ç†confirmå¼¹çª—
 driver.switch_to_alert().accept()
 time_delay(1)
 while(1):
-	# È«²¿·­¿ª
+	# å…¨éƒ¨ç¿»å¼€
 	turnCards_btn = driver.find_element_by_class_name("btn-primary")
 	turnCards_btn.click()
 	# turnCards_btn = driver.find_element_by_xpath("/html/body/div[@class='container body-content']/div[@id='result-panel']/div[@class='text-center']/button[@class='btn btn-primary'][1]")
 	# turnCards_btn.click()
-	# ÑÓÊ±3Ãë£¬¹Û²ìÒ»ÏÂ
+	# å»¶æ—¶3ç§’ï¼Œè§‚å¯Ÿä¸€ä¸‹
 	time_delay(3)
-	# ÔÙÀ´Ò»´Î
+	# å†æ¥ä¸€æ¬¡
 	onceMore_btn = driver.find_element_by_xpath("/html/body/div[@class='container body-content']/div[@id='result-panel']/div[@class='text-center']/button[@class='btn btn-primary'][2]")
 	onceMore_btn.click()
-	# ´¦Àíconfirmµ¯´°
+	# å¤„ç†confirmå¼¹çª—
 	driver.switch_to_alert().accept()
 	time_delay(1)
-
-
-# this block is to log in
-# try:
-# 	elem = driver.find_element_by_name("username")
-# 	elem.clear()
-# 	elem.send_keys("CodeSausage")
-# 	elem = driver.find_element_by_name("password")
-# 	elem.clear()
-# 	elem.send_keys("123456grc")
-# 	driver.find_element_by_class_name("btn").click()
-# except:
-# 	driver.close()
-# 	print "\n"
-# 	print "Hey! You didn't connect the Internet!\n \
-# 	   Try again when you connect the Internet later."
-# 	On_Internet = 0
-
-# # this block is to comment.
-# if On_Internet:
-# 	try:
-# 		elem = driver.find_element_by_name("content")
-# 		elem.clear()
-# 		elem.send_keys("That's Awesome!")
-# 		driver.find_element_by_xpath(u"//img[@style='max-width: 25px;']").click()
-# 		driver.find_element_by_id("qr").click()
-# 		driver.close()
-# 		print "\n"
-# 		print "OK, you have signed up successfully. 	\
-# 		Think what you should do, make a plan, and make it real."
-# 	except NoSuchElementException:
-# 	#Å×³öÒì³££¬×¥×¡Òì³£²¢ÇÒ±£Ö¤ÈÔÈ»¹Ø±Õä¯ÀÀÆ÷
-# 		driver.close()
-# 		print "\n"
-# 		raw_input("Hey, you have signed up today! \
-# 		Go to do what you should do!")
